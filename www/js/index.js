@@ -19,7 +19,7 @@ document.addEventListener('init', function (event) {
         page.querySelector('#signin').onclick = function () {
             document.querySelector('#myNavigator').pushPage('planlist.html', { data: { title: 'Page 2' } });
         };
-    } else if (page.id === 'page2') {
+    } else if (page.id === 'plan_list') {
         page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
     }
 });
