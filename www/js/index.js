@@ -8,3 +8,18 @@ var login = function () {
         ons.notification.alert('Incorrect username or password.');
     }
 };
+
+document.addEventListener('init', function (event) {
+    var page = event.target;
+
+    if (page.id === 'login') {
+        page.querySelector('#signup').onclick = function () {
+            document.querySelector('#myNavigator').pushPage('signup.html', { data: { title: 'Page 2' } });
+        };
+        page.querySelector('#signin').onclick = function () {
+            document.querySelector('#myNavigator').pushPage('planlist.html', { data: { title: 'Page 2' } });
+        };
+    } else if (page.id === 'page2') {
+        page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+    }
+});
