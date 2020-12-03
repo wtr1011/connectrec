@@ -84,54 +84,122 @@
             <ons-toolbar>
                 <div class="center" style="color:white;">Menu</div>
             </ons-toolbar>
+            <ons-tabbar swipeable id="appTabbar" position="auto">
+                <ons-tab page="makeplan1.html" label="Make Plan" icon="ion-home, material:md-home">
+                </ons-tab>
+                <ons-tab page="search.html" label="Search Plan" icon="md-settings" active-icon="md-face">
+                </ons-tab>
+                <ons-tab page="planlist.html" label="Plan List" icon="md-settings" active-icon="md-face">
+                </ons-tab>
+            </ons-tabbar>
 
-            <div align="center" style="margin: 50px auto 5px;">
-                <img src="logo/connectrec_logo.png" alt="connectrec" title="connectrec" width="200" height="50" >
-            </div>
-
-            <div style="text-align: center; margin-top: 30px;">
-                <p style="margin-top: 100px;">
-                    <ons-button id="make_plan">プランを作成</ons-button>
-                </p>
-                <p style="margin-top: 30px;">
-                    <ons-button id="plan">プランを検索</ons-button>
-                </p>
-                <p style="margin-top: 100px;">
-                    <ons-button id="myplan">My Plan</ons-button>
-                </p>
-            </div>
         </ons-page>
     </template>
 
     <template id="makeplan1.html">
         <ons-page id="make_plan1">
-            <ons-toolbar>
-                <div class="center" style="color: white;">Make Plan</div>
-            </ons-toolbar>
-
             <div style="margin: 20px auto 5px; text-align: center;">プラン情報を登録します</div>
             <div style="margin: 10px auto 5px; text-align: center;">プラン名</div>
             <div style="margin: 10px auto 5px; text-align: center;">都道府県</div>
 
+        <ons-card onclick="fn.pushPage({'id' : 'test', 'title' : '金閣寺' })">
+            <div class="title">金閣寺</div>
+        </ons-card>
 
         </ons-page>
     </template>
 
     <template id="search.html">
         <ons-page id="search_plan">
-            <ons-toolbar>
-                <div class="center" style="color: white;">Search Plan</div>
-            </ons-toolbar>
+            <div style="margin: 20px auto 5px; text-align: center;">検索項目を入力してください</div>
+            <ons-list>
+                <ons-list-header>都道府県の設定</ons-list-header>
+
+                <ons-list-item>
+                    <ons-select id="select-input">
+                        <option value="1">北海道</option>
+                        <option value="2">青森県</option>
+                        <option value="3">岩手県</option>
+                        <option value="4">宮城県</option>
+                        <option value="5">秋田県</option>
+                        <option value="6">山形県</option>
+                        <option value="7">福島県</option>
+                        <option value="8">茨城県</option>
+                        <option value="9">栃木県</option>
+                        <option value="10">群馬県</option>
+                        <option value="11">埼玉県</option>
+                        <option value="12">千葉県</option>
+                        <option value="13">東京都</option>
+                        <option value="14">神奈川県</option>
+                        <option value="15">新潟県</option>
+                        <option value="16">富山県</option>
+                        <option value="17">石川県</option>
+                        <option value="18">福井県</option>
+                        <option value="19">山梨県</option>
+                        <option value="20">長野県</option>
+                        <option value="21">岐阜県</option>
+                        <option value="22">静岡県</option>
+                        <option value="23">愛知県</option>
+                        <option value="24">三重県</option>
+                        <option value="25">滋賀県</option>
+                        <option value="26">京都府</option>
+                        <option value="27">大阪府</option>
+                        <option value="28">兵庫県</option>
+                        <option value="29">奈良県</option>
+                        <option value="30">和歌山県</option>
+                        <option value="31">鳥取県</option>
+                        <option value="32">島根県</option>
+                        <option value="33">岡山県</option>
+                        <option value="34">広島県</option>
+                        <option value="35">山口県</option>
+                        <option value="36">徳島県</option>
+                        <option value="37">香川県</option>
+                        <option value="38">愛媛県</option>
+                        <option value="39">高知県</option>
+                        <option value="40">福岡県</option>
+                        <option value="41">佐賀県</option>
+                        <option value="42">長崎県</option>
+                        <option value="43">熊本県</option>
+                        <option value="44">大分県</option>
+                        <option value="45">宮崎県</option>
+                        <option value="46">鹿児島県</option>
+                        <option value="47">沖縄県</option>
+                    </ons-select>
+                </ons-list-item>
+
+                <ons-list-header>季節</ons-list-header>
+                <ons-list-item>
+
+               </ons-list-item>
+
+                <ons-list-header>日数</ons-list-header>
+                <ons-list-item>
+
+                </ons-list-item>
+
+                <ons-list-header>人数</ons-list-header>
+                <ons-list-item>
+
+                </ons-list-item>
+
+                <ons-list-header>構成</ons-list-header>
+                <ons-list-item>
+
+                </ons-list-item>
+
+                <ons-list-header>予算</ons-list-header>
+                <ons-list-item>
+                    <ons-input id="budget-input" float maxlength="20" placeholder="¥x,xxx -"></ons-input>
+                </ons-list-item>
+
+
+            </ons-list>
 
         </ons-page>
     </template>
 
     <template id="planlist.html">
         <ons-page id="plan_list">
-            <ons-toolbar>
-                <div class="center" style="color: white;">Plan List</div>
-            </ons-toolbar>
-
         </ons-page>
     </template>
 
