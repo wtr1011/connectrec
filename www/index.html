@@ -85,11 +85,11 @@
                 <div class="center" style="color:white;">Menu</div>
             </ons-toolbar>
             <ons-tabbar swipeable id="appTabbar" position="auto">
-                <ons-tab page="makeplan1.html" label="Make Plan" icon="ion-home, material:md-home">
+                <ons-tab page="planlist.html" label="Plan List" icon="md-home">
                 </ons-tab>
-                <ons-tab page="search.html" label="Search Plan" icon="md-settings" active-icon="md-face">
+                <ons-tab page="makeplan1.html" label="Make Plan" icon="fa-file">
                 </ons-tab>
-                <ons-tab page="planlist.html" label="Plan List" icon="md-settings" active-icon="md-face">
+                <ons-tab page="search.html" label="Search Plan" icon="fa-question-circle-o">
                 </ons-tab>
             </ons-tabbar>
 
@@ -99,12 +99,77 @@
     <template id="makeplan1.html">
         <ons-page id="make_plan1">
             <div style="margin: 20px auto 5px; text-align: center;">プラン情報を登録します</div>
-            <div style="margin: 10px auto 5px; text-align: center;">プラン名</div>
-            <div style="margin: 10px auto 5px; text-align: center;">都道府県</div>
 
-        <ons-card onclick="fn.pushPage({'id' : 'test', 'title' : '金閣寺' })">
-            <div class="title">金閣寺</div>
-        </ons-card>
+            <ons-list>
+                <ons-list-header>プラン名の登録</ons-list-header>
+                <ons-list-item>
+                    <ons-input id="plan_name" float maxlength="20" placeholder="春限定学割ツアー"></ons-input>
+                </ons-list-item>
+                <ons-list-header>旅行プランのサムネイルを設定</ons-list-header>
+
+                <ons-list-header>都道府県の設定</ons-list-header>
+
+                <ons-list-item>
+                    <ons-select id="select-input">
+                        <option value="1">北海道</option>
+                        <option value="2">青森県</option>
+                        <option value="3">岩手県</option>
+                        <option value="4">宮城県</option>
+                        <option value="5">秋田県</option>
+                        <option value="6">山形県</option>
+                        <option value="7">福島県</option>
+                        <option value="8">茨城県</option>
+                        <option value="9">栃木県</option>
+                        <option value="10">群馬県</option>
+                        <option value="11">埼玉県</option>
+                        <option value="12">千葉県</option>
+                        <option value="13">東京都</option>
+                        <option value="14">神奈川県</option>
+                        <option value="15">新潟県</option>
+                        <option value="16">富山県</option>
+                        <option value="17">石川県</option>
+                        <option value="18">福井県</option>
+                        <option value="19">山梨県</option>
+                        <option value="20">長野県</option>
+                        <option value="21">岐阜県</option>
+                        <option value="22">静岡県</option>
+                        <option value="23">愛知県</option>
+                        <option value="24">三重県</option>
+                        <option value="25">滋賀県</option>
+                        <option value="26">京都府</option>
+                        <option value="27">大阪府</option>
+                        <option value="28">兵庫県</option>
+                        <option value="29">奈良県</option>
+                        <option value="30">和歌山県</option>
+                        <option value="31">鳥取県</option>
+                        <option value="32">島根県</option>
+                        <option value="33">岡山県</option>
+                        <option value="34">広島県</option>
+                        <option value="35">山口県</option>
+                        <option value="36">徳島県</option>
+                        <option value="37">香川県</option>
+                        <option value="38">愛媛県</option>
+                        <option value="39">高知県</option>
+                        <option value="40">福岡県</option>
+                        <option value="41">佐賀県</option>
+                        <option value="42">長崎県</option>
+                        <option value="43">熊本県</option>
+                        <option value="44">大分県</option>
+                        <option value="45">宮崎県</option>
+                        <option value="46">鹿児島県</option>
+                        <option value="47">沖縄県</option>
+                    </ons-select>
+                </ons-list-item>
+                <ons-list-header>観光地の設定</ons-list-header>
+                <!--ons-card onclick="fn.pushPage({'id' : 'login.html', 'title' : '金閣寺' })"-->
+                <ons-card onclick="change()" id = "change">
+                    <div class="title">金閣寺</div>
+                </ons-card>
+                <ons-card onclick="fn.pushPage({'id' : 'login.html', 'title' : '金閣寺' })">
+                    <ons-icon icon="md-plus"></ons-icon>
+                </ons-card>
+
+            </ons-list>
 
         </ons-page>
     </template>
@@ -200,6 +265,19 @@
 
     <template id="planlist.html">
         <ons-page id="plan_list">
+            <ons-card id = "plan1">
+                <img src="/www/img/kinkaku-ji-3995909_640.jpg" alt="kinkakuji" style="width: 100%">
+                <div class="title">京都の寺を巡ろう</div>
+            </ons-card>
+            <ons-card id = "plan2">
+                <!--img src="https://cdn.pixabay.com/photo/2017/01/13/07/41/temple-1976543_640.jpg" alt="kiyomizudera" style="width: 100%" -->
+                <img src="/www/img/temple-1976543_640.jpg" alt="kiyomizudera" style="width: 100%">
+                <div class="title">清水寺へ行こう</div>
+            </ons-card>
+            <ons-card id = "plan3">
+                <img src="/www/img/mountain-477832_640.jpg" alt="fuji" style="width: 100%">
+                <div class="title">日本一の富士山ツアー</div>
+            </ons-card>
         </ons-page>
     </template>
 

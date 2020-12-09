@@ -1,4 +1,4 @@
-var login = function () {
+function  login() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
@@ -7,6 +7,10 @@ var login = function () {
     } else {
         ons.notification.alert('Incorrect username or password.');
     }
+};
+
+function change() {
+    change.querySelector('#myNavigation').pushPage(('login.html'), { data: { title: 'Page 2' } });
 };
 
 document.addEventListener('init', function (event) {
@@ -19,19 +23,23 @@ document.addEventListener('init', function (event) {
         page.querySelector('#signin').onclick = function () {
             document.querySelector('#myNavigator').pushPage('menu.html', { data: { title: 'Page 2' } });
         };
-    } else if (page.id === 'plan_list') {
-        page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-    } else if (page.id === 'menu'){
-        page.querySelector('#make_plan').onclick = function () {
-            document.querySelector('#myNavigator').pushPage('makeplan1.html', { data: { title: 'Make plan' } });
-        };
+    }
 
-        page.querySelector('#plan').onclick = function () {
-            document.querySelector('#myNavigator').pushPage('search.html', { data: { title: 'search plan' } });
+    if (page.id = 'plan_list') {
+        page.querySelector('#plan1').onclick = function () {
+            document.querySelector('#myNavigator').pushPage('login.html', { data: { title: 'Page 2' } });
         };
+        page.querySelector('#plan2').onclick = function () {
+            document.querySelector('#myNavigator').pushPage('login.html', { data: { title: 'Page 2' } });
+        };
+        page.querySelector('#plan3').onclick = function () {
+            document.querySelector('#myNavigator').pushPage('login.html', { data: { title: 'Page 2' } });
+        };
+    }
 
-        page.querySelector('#myplan').onclick = function () {
-            document.querySelector('#myNavigator').pushPage('planlist.html', { data: { title: 'plan list' } });
+    if (page.id === 'make_plan1') {
+        page.querySelector('#change').onclick = function () {
+            document.querySelector('#myNavigator').pushPage('login.html', { data: { title: 'Page 2' } });
         };
     }
 });
