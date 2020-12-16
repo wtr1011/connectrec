@@ -8,11 +8,11 @@ function  login() {
         ons.notification.alert('Incorrect username or password.');
     }
 };
-
+/*
 function change() {
     change.querySelector('#myNavigation').pushPage(('login.html'), { data: { title: 'Page 2' } });
 };
-
+*/
 document.addEventListener('init', function (event) {
     var page = event.target;
 
@@ -33,13 +33,14 @@ document.addEventListener('init', function (event) {
             document.querySelector('#myNavigator').pushPage('login.html', { data: { title: 'Page 2' } });
         };
         page.querySelector('#plan3').onclick = function () {
-            document.querySelector('#myNavigator').pushPage('login.html', { data: { title: 'Page 2' } });
+            document.querySelector('#myNavigator').pushPage('makeplan1.html', { data: { title: 'Page 2' } });
         };
-    }
-
-    if (page.id === 'make_plan1') {
-        page.querySelector('#change').onclick = function () {
-            document.querySelector('#myNavigator').pushPage('login.html', { data: { title: 'Page 2' } });
+    } else if (page.id = 'make_plan1') {
+        page.querySelector('#place1').onclick = function () {
+            document.querySelector('#myNavigator').pushPage('login.html', { data: { title: 'place1' } });
+        };
+        page.querySelector('#place2').onclick = function () {
+            document.querySelector('#myNavigator').pushPage('login.html', { data: { title: 'place 2' } });
         };
     }
 });
